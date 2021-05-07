@@ -2,6 +2,8 @@ package com.example.test7weeks;
 
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
+import android.graphics.Paint;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,59 +23,48 @@ import fr.enssat.caronnantel.utilities.DataImporter;
 
 
 public class EEGSignalsActivity extends AppCompatActivity {
-    List<Double> time, signal1;
-    private Map<Integer, Channels> eegsignals;
-    double elementTime, elementSignal1;
 
-    public void setEEGSignals(Map<Integer, Channels> eegsignals) {
-        this.eegsignals = eegsignals;
+    private  Map<Integer, Channels> eegsignals;
+
+
+
+    public EEGSignalsActivity()  {
     }
 
-    public EEGSignalsActivity(Resources resources) throws IOException {
-        DataImporter importereeg = new DataImporter();
-        Map<Integer, Channels> eegsignals = importereeg.getEEG(resources);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eegsignals);
-        //getX();
         GraphView graph = (GraphView) findViewById(R.id.graph); // Get graph from layout
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(); // form series (curve for graph)
-
-        time = getSeries(0, 267619);
-        signal1 = getSeries(267620, 535239);
-        for (int i = 0; i <= 267619; i++) {
-            //y= Math.sin(2*x*0.2)-Math.sin(x*0.2);
-            //series.appendData(new DataPoint(x,y),true, 150);
-            elementTime = time.get(i);
-            elementSignal1 = signal1.get(i);
-            series.appendData(new DataPoint(elementTime, elementSignal1), true, 267619);
+        LineGraphSeries<DataPoint> series1 = new LineGraphSeries<>(); // form series (curve for graph)
+        List<Channels> tempseries2 = null;
+        try {
+            tempseries2 = getSeries(0, 267619);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-
-
-
-        /*BarGraphSeries<DataPoint> series2 = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, -2),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });*/
+        for (Channels c : tempseries2) {
+            series1.appendData(new DataPoint(c.getTime(), c.getChannel1()), true, 267619);
+        }
 
 
         // Enabling zoom!
         // set manual X bounds
+        graphPlot(graph, series1);
+
+    }
+
+    private void graphPlot(GraphView graph, LineGraphSeries<DataPoint> series) {
         graph = graph;
         graph.getViewport().setYAxisBoundsManual(true);
-        graph.getViewport().setMinY(-15); //Change this for show
-        graph.getViewport().setMaxY(10);
+        graph.getViewport().setMinY(-60); //Change this for show
+        graph.getViewport().setMaxY(60);
 
         graph.getViewport().setXAxisBoundsManual(true);
-        graph.getViewport().setMinX(4);
-        graph.getViewport().setMaxX(80);
+        graph.getViewport().setMinX(0);
+        graph.getViewport().setMaxX(5);
 
         // Enable or disable
         graph.getViewport().setScrollable(true); // enables horizontal scrolling
@@ -81,41 +72,46 @@ public class EEGSignalsActivity extends AppCompatActivity {
         graph.getViewport().setScalable(true); // enables horizontal zooming and scrolling
         graph.getViewport().setScalableY(true); // enables vertical zooming and scrolling
 
-        //graph.addSeries(series2); //HUSK AT UDKOMMENTER DETTE
+
         graph.addSeries(series);
 
         // Graphical content
         // set color, title of curve, DataPoints radius, thickness
-        series.setColor(Color.RED); // graph color to red
-        series.setTitle("Test curve"); // for legend
-        series.setDrawDataPoints(true); // show datam points
-        series.setDataPointsRadius(16); // size data points
-        series.setThickness(8); // thickness of graph
+        //series.setColor(Color.rgb(16,172,132)); // graph color to red
+        //series.setTitle("TP9"); // for legend
+        series.setDrawDataPoints(false); // show datam points
+        //series.setDataPointsRadius(16); // size data points
+        series.setThickness(3); // thickness of graph
+
+        // custom paint to make a dotted line
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(3);
+        paint.setColor(Color.rgb(16,172,132));
+        paint.setPathEffect(new DashPathEffect(new float[]{8, 5}, 0));
+        series.setCustomPaint(paint);
 
         // Set title of graph
-        graph.setTitle("Test curve"); // set title of graph
-        graph.setTitleTextSize(90); // Size the text
-        graph.setTitleColor(Color.BLUE); // set color of title
-
-        // legend
-        graph.getLegendRenderer().setVisible(true);
-        graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.BOTTOM);
+        graph.setTitle("TP9"); // set title of graph
+        graph.setTitleTextSize(70); // Size the text
+        graph.setTitleColor(Color.rgb(193,183,198)); // set color of title
 
         // axis titles
         GridLabelRenderer gridLabel = graph.getGridLabelRenderer();
-        gridLabel.setHorizontalAxisTitle("X Axis title");
+        gridLabel.setHorizontalAxisTitle("Time (s)");
         gridLabel.setHorizontalAxisTitleTextSize(50);
-        gridLabel.setVerticalAxisTitle("Y Axis title");
+        gridLabel.setVerticalAxisTitle("Amplitude"); //what units?
         gridLabel.setVerticalAxisTitleTextSize(50);
-
     }
 
 
-    public List<Double> getSeries(int start, int end) {
-        List<Double> series = new ArrayList<>();
+    public List<Channels> getSeries(int start, int end) throws IOException {
+        DataImporter importereeg = new DataImporter();
+        eegsignals = importereeg.getEEG(this.getResources());
+        List<Channels> series = new ArrayList<>();
         for (int i = start; i <= end; i++) {
-            Channels channels = eegsignals.get(i);
-            series.add(channels.getTime());
+            Channels channel = eegsignals.get(i);
+            series.add(channel);
         }
         return series;
     }

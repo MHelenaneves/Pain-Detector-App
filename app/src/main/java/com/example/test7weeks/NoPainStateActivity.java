@@ -45,7 +45,7 @@ public class NoPainStateActivity extends AppCompatActivity implements View.OnCli
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(NoPainStateActivity.this,
-                        EEGSignalsActivity.class));
+                        EEGSignalsActivity.class)); //double click
 
             }
         });

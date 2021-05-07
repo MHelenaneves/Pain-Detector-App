@@ -39,8 +39,8 @@
 
 
         <activity android:name=".EEGSignalsActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:label="@string/title_activity_eegsignals" >
+            android:theme="@style/Theme.AppCompat.NoActionBar"  >
+            android:label="@string/title_activity_eegsignals"
         </activity>
 
         <activity android:name=".ImpedanceCheckActivity"
