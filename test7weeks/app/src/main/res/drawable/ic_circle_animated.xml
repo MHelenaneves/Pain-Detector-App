@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    tools:targetApi="lollipop">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="512dp"
+            android:height="512dp"
+            android:viewportWidth="512"
+            android:viewportHeight="512">
+            <path
+                android:name="path"
+                android:pathData="M 256.5 125.585 C 187.25 125.585 130.915 181.921 130.915 251.17 C 130.915 320.421 187.25 376.755 256.5 376.755 C 325.75 376.755 382.085 320.422 382.085 251.17 C 382.085 181.921 325.75 125.585 256.5 125.585 Z M 256.5 357.434 C 197.905 357.434 150.236 309.764 150.236 251.17 C 150.236 192.577 197.906 144.906 256.5 144.906 C 315.094 144.906 362.764 192.577 362.764 251.17 C 362.764 309.764 315.094 357.434 256.5 357.434 Z"
+                android:fillColor="#acabd8"
+                android:strokeWidth="1"/>
+            <path
+                android:name="path_1"
+                android:pathData="M 430.387 241.509 C 425.052 241.509 420.727 245.836 420.727 251.169 C 420.727 341.727 346.557 415.395 256 415.395 C 250.665 415.395 245.84 419.722 245.84 425.055 L 245.84 502.338 C 245.84 507.674 250.165 511.998 255.5 511.998 C 260.835 511.998 265.16 507.674 265.16 502.338 L 265.16 434.467 C 361.764 429.42 439.547 349.136 439.547 251.169 C 439.547 245.836 435.722 241.509 430.387 241.509 Z M 255.5 0 C 250.165 0 245.84 4.327 245.84 9.66 L 245.84 67.872 C 149.236 72.92 72.453 153.203 72.453 251.17 C 72.453 256.506 77.029 260.83 82.363 260.83 C 87.698 260.83 91.899 256.506 91.899 251.17 C 91.899 160.614 165.444 86.944 256 86.944 C 261.335 86.944 265.16 82.62 265.16 77.284 L 265.16 9.66 C 265.16 4.327 260.835 0 255.5 0 Z"/>
+        </vector>
+    </aapt:attr>
+    <target android:name="path">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:duration="1000"
+                    android:valueFrom="#acabd8"
+                    android:valueTo="@drawable/orange_colour"
+                    android:valueType="colorType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:startOffset="1000"
+                    android:duration="1000"
+                    android:valueFrom="@drawable/orange_colour"
+                    android:valueTo="#acabd8"
+                    android:valueType="colorType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:startOffset="2000"
+                    android:duration="1000"
+                    android:valueFrom="#acabd8"
+                    android:valueTo="@drawable/orange_colour"
+                    android:valueType="colorType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:startOffset="3000"
+                    android:duration="1000"
+                    android:valueFrom="@drawable/orange_colour"
+                    android:valueTo="#acabd8"
+                    android:valueType="colorType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:startOffset="4000"
+                    android:duration="1000"
+                    android:valueFrom="#acabd8"
+                    android:valueTo="@drawable/orange_colour"
+                    android:valueType="colorType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="fillColor"
+                    android:startOffset="5000"
+                    android:duration="1000"
+                    android:valueFrom="@drawable/orange_colour"
+                    android:valueTo="#acabd8"
+                    android:valueType="colorType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

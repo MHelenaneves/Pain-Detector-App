@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/solid_background"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/round_button"
+        android:onClick="onClick"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@drawable/buttontext_colour"
+        android:textSize="20dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.752"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editComments"
+        app:layout_constraintVertical_bias="0.713"
+        android:visibility="invisible"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/confirm"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@drawable/round_button"
+        android:onClick="onClick"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:textColor="@drawable/buttontext_colour"
+        android:textSize="20dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editComments"
+        app:layout_constraintVertical_bias="0.713" />
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="Full Name"
+        android:textColor="@drawable/text_colour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editFirstName"
+        android:layout_width="278dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@drawable/text_colour"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:textColor="@drawable/editview_colour"
+        android:textColorHint="@drawable/editview_colour"
+        app:layout_constraintStart_toStartOf="@+id/firstname"
+        app:layout_constraintTop_toBottomOf="@+id/firstname" />
+
+    <EditText
+        android:id="@+id/editComments"
+        android:layout_width="272dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@drawable/text_colour"
+        android:ems="10"
+        android:hint="Comments"
+        android:inputType="textPersonName"
+        android:textColor="@drawable/editview_colour"
+        android:textColorHint="@drawable/editview_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/comments"
+        app:layout_constraintTop_toBottomOf="@+id/comments"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/medicalcondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Medical condition"
+        android:textColor="@drawable/text_colour"
+        app:layout_constraintStart_toStartOf="@+id/editFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Comments"
+        android:textColor="@drawable/text_colour"
+        app:layout_constraintStart_toStartOf="@+id/medication"
+        app:layout_constraintTop_toBottomOf="@+id/editMedication" />
+
+    <EditText
+        android:id="@+id/editMedicalCondition"
+        android:layout_width="275dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@drawable/text_colour"
+        android:ems="10"
+        android:hint="Medical Condition"
+        android:inputType="textPersonName"
+        android:textColor="@drawable/editview_colour"
+        android:textColorHint="@drawable/editview_colour"
+        app:layout_constraintStart_toStartOf="@+id/medicalcondition"
+        app:layout_constraintTop_toBottomOf="@+id/medicalcondition" />
+
+    <TextView
+        android:id="@+id/medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Medication"
+        android:textColor="@drawable/text_colour"
+        app:layout_constraintStart_toStartOf="@+id/medicalcondition"
+        app:layout_constraintTop_toBottomOf="@+id/editMedicalCondition" />
+
+    <EditText
+        android:id="@+id/editMedication"
+        android:layout_width="274dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@drawable/text_colour"
+        android:ems="10"
+        android:hint="Medication"
+        android:inputType="textPersonName"
+        android:textColor="@drawable/editview_colour"
+        android:textColorHint="@drawable/editview_colour"
+        app:layout_constraintStart_toStartOf="@+id/medication"
+        app:layout_constraintTop_toBottomOf="@+id/medication" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,3 @@
+include ':ConfusionMatrix'
+include ':app'
+rootProject.name = "test7weeks"

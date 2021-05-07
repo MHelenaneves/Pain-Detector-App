@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/solid_background">
+
+    <TextView
+        android:id="@+id/assistance"
+        android:layout_width="236dp"
+        android:layout_height="93dp"
+        android:text="Current state"
+        android:textAlignment="center"
+        android:textColor="@drawable/text_colour"
+        android:textSize="18dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/browseEEG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eeg_icon"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="110dp"
+        android:layout_height="49dp"
+        android:text="PAIN"
+        android:textAlignment="center"
+        android:textColor="@drawable/orange_colour"
+        android:textSize="38dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/browseEEG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="414dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="120dp"
+        android:text="Helena Christensen"
+        android:textAlignment="center"
+        android:textColor="@drawable/button_colour"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/browseEEG"
+        android:layout_width="238dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="96dp"
+        android:background="@drawable/round_button"
+        android:onClick="onClick"
+        android:text="Browse EEG signals"
+
+        android:textAllCaps="false"
+
+        android:textColor="@drawable/buttontext_colour"
+        android:textSize="20dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.497"
+
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/circle_icon"
+        android:layout_width="372dp"
+        android:layout_height="323dp"
+        app:layout_constraintBottom_toTopOf="@+id/browseEEG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.766"
+        app:srcCompat="@drawable/ic_circle_animated" />
+
+
+
+    <ImageView
+        android:id="@+id/eeg_icon"
+        android:layout_width="410dp"
+        android:layout_height="233dp"
+        app:layout_constraintBottom_toTopOf="@+id/browseEEG"
+        app:layout_constraintEnd_toEndOf="@+id/circle_icon"
+        app:layout_constraintStart_toStartOf="@+id/circle_icon"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_skewed_quadricircle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

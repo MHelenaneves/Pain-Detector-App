@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/solid_background"
+    tools:context=".RegisterActivity">
+
+    <!--<com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Pain1.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="" />
+
+    </com.google.android.material.appbar.AppBarLayout> -->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:backgroundTint="@drawable/button_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.957"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@drawable/buttontext_colour" />
+
+
+    <Button
+        android:id="@+id/patient1"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/transparent_button"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@drawable/text_colour"
+        android:textSize="24dip"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/patient2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/transparent_button"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@drawable/text_colour"
+        android:textSize="24dip"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient1" />
+
+    <Button
+        android:id="@+id/patient3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/transparent_button"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@drawable/text_colour"
+        android:textSize="24dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient2" />
+
+    <Button
+        android:id="@+id/patient4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/transparent_button"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@drawable/text_colour"
+        android:textSize="24dip"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patient3"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="199dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="261dp"
+        android:text="List of Patients"
+        android:textSize="32dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
