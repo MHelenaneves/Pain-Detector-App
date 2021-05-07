@@ -3,7 +3,6 @@ package com.example.test7weeks;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.transition.ChangeBounds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,8 +21,9 @@ import fr.enssat.caronnantel.utilities.DataImporter;
 
 
 public class EEGSignalsActivity extends AppCompatActivity {
-
+    List<Double> time, signal1;
     private Map<Integer, Channels> eegsignals;
+    double elementTime, elementSignal1;
 
     public void setEEGSignals(Map<Integer, Channels> eegsignals) {
         this.eegsignals = eegsignals;
@@ -32,26 +32,28 @@ public class EEGSignalsActivity extends AppCompatActivity {
     public EEGSignalsActivity(Resources resources) throws IOException {
         DataImporter importereeg = new DataImporter();
         Map<Integer, Channels> eegsignals = importereeg.getEEG(resources);
-
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eegsignals);
         //getX();
-        // Get graph from layout
-        GraphView graph =(GraphView) findViewById(R.id.graph);
+        GraphView graph = (GraphView) findViewById(R.id.graph); // Get graph from layout
+        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(); // form series (curve for graph)
 
-        // form series (curve for graph)
-        LineGraphSeries<DataPoint> series =
-                new LineGraphSeries<>();
-        double y;
-        for (int x=0;x<150; x++){
-            y= Math.sin(2*x*0.2)-Math.sin(x*0.2);
-            series.appendData(new DataPoint(x,y),true, 150);
+        time = getSeries(0, 267619);
+        signal1 = getSeries(267620, 535239);
+        for (int i = 0; i <= 267619; i++) {
+            //y= Math.sin(2*x*0.2)-Math.sin(x*0.2);
+            //series.appendData(new DataPoint(x,y),true, 150);
+            elementTime = time.get(i);
+            elementSignal1 = signal1.get(i);
+            series.appendData(new DataPoint(elementTime, elementSignal1), true, 267619);
         }
+
+
+
 
         /*BarGraphSeries<DataPoint> series2 = new BarGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, -2),
@@ -109,47 +111,14 @@ public class EEGSignalsActivity extends AppCompatActivity {
     }
 
 
-
-
-    public List<Double> getTime(int start, int end){
-        List<Double> time = new ArrayList<>();
-        for (int i = start; i <= end; i++){
+    public List<Double> getSeries(int start, int end) {
+        List<Double> series = new ArrayList<>();
+        for (int i = start; i <= end; i++) {
             Channels channels = eegsignals.get(i);
-            time.add(channels.getTime());
+            series.add(channels.getTime());
         }
-        return time;
+        return series;
     }
 
-    public List<Double> getChannel1(int start, int end){
-        List<Double> time = new ArrayList<>();
-        for (int i = start; i <= end; i++){
-            Channels channels = eegsignals.get(i);
-            time.add(channels.getChannel1());
-        }
-        return time;
-    }
-    public List<Double> getChannel2(int start, int end){
-        List<Double> time = new ArrayList<>();
-        for (int i = start; i <= end; i++){
-            Channels channels = eegsignals.get(i);
-            time.add(channels.getChannel2());
-        }
-        return time;
-    }
-    public List<Double> getChannel3(int start, int end){
-        List<Double> time = new ArrayList<>();
-        for (int i = start; i <= end; i++){
-            Channels channels = eegsignals.get(i);
-            time.add(channels.getChannel3());
-        }
-        return time;
-    }
-    public List<Double> getChannel4(int start, int end){
-        List<Double> time = new ArrayList<>();
-        for (int i = start; i <= end; i++){
-            Channels channels = eegsignals.get(i);
-            time.add(channels.getChannel4());
-        }
-        return time;
-    }
 }
+

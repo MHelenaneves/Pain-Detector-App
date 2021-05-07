@@ -27,14 +27,14 @@
                     android:propertyName="fillColor"
                     android:duration="1000"
                     android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
+                    android:valueTo="#FF6F00"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
                 <objectAnimator
                     android:propertyName="fillColor"
                     android:startOffset="1000"
                     android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
+                    android:valueFrom="#FF6F00"
                     android:valueTo="#acabd8"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
@@ -43,14 +43,14 @@
                     android:startOffset="2000"
                     android:duration="1000"
                     android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
+                    android:valueTo="#FF6F00"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
                 <objectAnimator
                     android:propertyName="fillColor"
                     android:startOffset="3000"
                     android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
+                    android:valueFrom="#FF6F00"
                     android:valueTo="#acabd8"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
@@ -59,14 +59,14 @@
                     android:startOffset="4000"
                     android:duration="1000"
                     android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
+                    android:valueTo="#FF6F00"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
                 <objectAnimator
                     android:propertyName="fillColor"
                     android:startOffset="5000"
                     android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
+                    android:valueFrom="#FF6F00"
                     android:valueTo="#acabd8"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
@@ -75,14 +75,14 @@
                     android:startOffset="4000"
                     android:duration="1000"
                     android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
+                    android:valueTo="#FF6F00"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
                 <objectAnimator
                     android:propertyName="fillColor"
                     android:startOffset="5000"
                     android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
+                    android:valueFrom="#FF6F00"
                     android:valueTo="#acabd8"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
@@ -91,14 +91,14 @@
                     android:startOffset="4000"
                     android:duration="1000"
                     android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
+                    android:valueTo="#FF6F00"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
                 <objectAnimator
                     android:propertyName="fillColor"
                     android:startOffset="5000"
                     android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
+                    android:valueFrom="#FF6F00"
                     android:valueTo="#acabd8"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
@@ -107,240 +107,13 @@
                     android:startOffset="4000"
                     android:duration="1000"
                     android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
+                    android:valueTo="#FF6F00"
                     android:valueType="colorType"
                     android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="4000"
-                    android:duration="1000"
-                    android:valueFrom="#acabd8"
-                    android:valueTo="@drawable/orange_colour"
-                    android:valueType="colorType"
-                    android:interpolator="@android:anim/linear_interpolator"/>
-                <objectAnimator
-                    android:propertyName="fillColor"
-                    android:startOffset="5000"
-                    android:duration="1000"
-                    android:valueFrom="@drawable/orange_colour"
-                    android:valueTo="#acabd8"
-                    android:valueType="colorType"/>
+
+
+
+
 
             </set>
         </aapt:attr>
