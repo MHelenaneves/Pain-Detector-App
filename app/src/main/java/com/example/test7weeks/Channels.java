@@ -6,6 +6,17 @@ public class Channels {
     private double channel2;
     private double channel3;
     private double channel4;
+    private double time;
+
+    public double getTime() {
+        return time;
+    }
+
+    public void setTime(double time) {
+        this.time = time;
+    }
+
+
 
 
     public double getChannel1() { return channel1; }

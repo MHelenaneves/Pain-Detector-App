@@ -52,7 +52,8 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                setContentView(R.layout.activity_statenotfound);
+                                startActivity(new Intent(MainActivity.this,
+                                        ImpedanceCheckActivity.class));
                             } //data not available
                         });
 

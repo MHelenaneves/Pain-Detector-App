@@ -29,18 +29,17 @@
         android:id="@+id/namenopain"
         android:layout_width="388dp"
         android:layout_height="61dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="84dp"
         android:gravity="center"
         android:text="Impedance Check"
         android:textAlignment="center"
         android:textColor="@drawable/button_colour"
-        android:textSize="28dp"
+        android:textSize="36dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintHorizontal_bias="0.304"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <ImageView
         android:id="@+id/circle_icon"
@@ -50,30 +49,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namenopain"
-        app:layout_constraintVertical_bias="0.512"
+        app:layout_constraintVertical_bias="0.354"
         app:srcCompat="@drawable/ic_circle" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="295dp"
         android:layout_height="98dp"
+        android:layout_marginBottom="228dp"
         android:gravity="center"
-        android:text="Adjust the headset to the patient's head according to the manufacturer's instructions"
+        android:text="Adjust the headset"
         android:textAlignment="center"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/circle_icon"
+        android:textColor="@drawable/textcolor2"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namenopain"
+        app:layout_constraintVertical_bias="0.826" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="282dp"
         android:layout_height="87dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="124dp"
         android:gravity="center"
-        android:text="Once sufficienct impedance is achieved you will start seeing predictions for the patient's state"
+        android:text="You will start seeing predictions soon"
         android:textAlignment="center"
-        android:textSize="18dp"
+        android:textColor="@drawable/textcolor2"
+        android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

@@ -31,7 +31,7 @@ public class NoPainStateActivity extends AppCompatActivity implements View.OnCli
 
     public String getTextViewText(){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String TextViewName = prefs.getString("TextViewText", "Patient1");
+        String TextViewName = prefs.getString("TextPatientName", "Patient1");
         return TextViewName;
     }
 

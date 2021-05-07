@@ -16,7 +16,8 @@
 
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.Test7weeks">
+
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -24,33 +25,41 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-
-            android:theme="@style/Theme.Test7weeks">
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".CreateUserActivity">
+        <activity android:name=".CreateUserActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             android:label="@string/title_activity_createuser"
         </activity>
 
 
-        <activity android:name=".EEGSignalsActivity">
-            android:label="@string/title_activity_eegsignals"
-            android:theme="@style/Theme.Test7weeks">
+        <activity android:name=".EEGSignalsActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:label="@string/title_activity_eegsignals" >
         </activity>
 
+        <activity android:name=".ImpedanceCheckActivity"
+            android:theme="@style/Theme.Design.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:label="@string/title_activity_main"
+        </activity>
 
-        <activity android:name=".PainStateActivity">
+        <activity android:name=".PainStateActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             android:label="@string/title_activity_painstate"
         </activity>
 
-        <activity android:name=".NoPainStateActivity">
+        <activity android:name=".NoPainStateActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             android:label="@string/title_activity_nopainstate"
         </activity>
 
-        <activity android:name=".StateNotFoundActivity">
+        <activity android:name=".StateNotFoundActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             android:label="@string/title_activity_statenotfound"
         </activity>
 

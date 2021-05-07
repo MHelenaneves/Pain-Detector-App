@@ -14,7 +14,7 @@
         android:text="Current state"
         android:textAlignment="center"
         android:textColor="@drawable/text_colour"
-        android:textSize="18dp"
+        android:textSize="24dp"
 
         app:layout_constraintBottom_toTopOf="@+id/browseeegnopain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
         android:textAlignment="center"
         android:gravity="center"
         android:textColor="@drawable/button_colour"
-        android:textSize="28dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"

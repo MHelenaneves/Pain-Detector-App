@@ -1,7 +1,9 @@
 package com.example.test7weeks;
 
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.transition.ChangeBounds;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,22 +13,27 @@ import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+
+import fr.enssat.caronnantel.utilities.DataImporter;
 
 
 public class EEGSignalsActivity extends AppCompatActivity {
 
-    private Map<Time, Channels> eegsignals;
+    private Map<Integer, Channels> eegsignals;
 
-    public void setEEGSignals(Map<Time, Channels> eegsignals) {
+    public void setEEGSignals(Map<Integer, Channels> eegsignals) {
         this.eegsignals = eegsignals;
     }
 
-    /*public EEGSignalsActivity(Resources resources) throws IOException {
+    public EEGSignalsActivity(Resources resources) throws IOException {
         DataImporter importereeg = new DataImporter();
-        Map<Time, Channels> eegsignals = importereeg.getEEG(resources);
+        Map<Integer, Channels> eegsignals = importereeg.getEEG(resources);
 
-    }*/
+    }
 
 
     @Override
@@ -102,24 +109,47 @@ public class EEGSignalsActivity extends AppCompatActivity {
     }
 
 
-/*    public  getX(){
 
-        Time timestamp = new Time();
-        timestamp.setTime();
-        List<Time> x = new ArrayList<>();
 
-        for (Map.Entry<Time, Channels> entry : eegsignals.entrySet()) {
-            Time key = entry.getKey();
-            Channels channels = entry.getValue();
+    public List<Double> getTime(int start, int end){
+        List<Double> time = new ArrayList<>();
+        for (int i = start; i <= end; i++){
+            Channels channels = eegsignals.get(i);
+            time.add(channels.getTime());
         }
-        return channels;
+        return time;
+    }
 
-        Collection<Channels> signalValues = eegsignals.values();
-        Double channelSeries = eegsignals.getValue();
-
-
-    }*/
-
-
-
+    public List<Double> getChannel1(int start, int end){
+        List<Double> time = new ArrayList<>();
+        for (int i = start; i <= end; i++){
+            Channels channels = eegsignals.get(i);
+            time.add(channels.getChannel1());
+        }
+        return time;
+    }
+    public List<Double> getChannel2(int start, int end){
+        List<Double> time = new ArrayList<>();
+        for (int i = start; i <= end; i++){
+            Channels channels = eegsignals.get(i);
+            time.add(channels.getChannel2());
+        }
+        return time;
+    }
+    public List<Double> getChannel3(int start, int end){
+        List<Double> time = new ArrayList<>();
+        for (int i = start; i <= end; i++){
+            Channels channels = eegsignals.get(i);
+            time.add(channels.getChannel3());
+        }
+        return time;
+    }
+    public List<Double> getChannel4(int start, int end){
+        List<Double> time = new ArrayList<>();
+        for (int i = start; i <= end; i++){
+            Channels channels = eegsignals.get(i);
+            time.add(channels.getChannel4());
+        }
+        return time;
+    }
 }

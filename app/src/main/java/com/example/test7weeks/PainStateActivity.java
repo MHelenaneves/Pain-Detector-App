@@ -32,7 +32,7 @@ public class PainStateActivity extends AppCompatActivity implements View.OnClick
 
     public String getTextViewText(){
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        String TextViewName = prefs.getString("TextViewText", "Patient1");
+        String TextViewName = prefs.getString("TextPatientName", "Patient1");
         return TextViewName;
     }
 

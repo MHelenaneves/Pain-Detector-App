@@ -28,7 +28,6 @@ public class RegisterActivity extends AppCompatActivity {
     public int UserNumber;
     String Name;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
             b.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Patient = b;
                     startActivity(new Intent(RegisterActivity.this,
                             MainActivity.class));
 
@@ -99,5 +99,15 @@ public class RegisterActivity extends AppCompatActivity {
             buttons.add(Patient);
         }
         addUser = findViewById(R.id.fab);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("TextPatientName", (Patient.getText().toString()));
+        editor.commit();
+
     }
 }

@@ -177,27 +177,27 @@ public class DataImporter extends MainActivity {
     }
 
 
-    public Map<Time, Channels> importEEG(int fileName, Resources resources) throws IOException{
+    public Map<Integer, Channels> importEEG(int fileName, Resources resources) throws IOException{
         InputStream is = resources.openRawResource(fileName);//now working
         //the files have to be in the raw folder
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
-        Map<Time, Channels> signals = new HashMap<>();
+        Map<Integer, Channels> signals = new HashMap<>();
+        int i = 0;
         try {
             // While the BufferedReader readLine is not null
             String readLine = null;
             while ((readLine = br.readLine()) != null) {//this will read for every line of the file
                 String[] row =  readLine.split(",");   // create a list of strings, separated by characters(commas) - Split
-
                 Channels channels= new Channels();
-                Time timestamp = new Time();
-
-                timestamp.setTime(Double.parseDouble(row[0]));
+                //Time timestamp = new Time();
+                //timestamp.setTime(Double.parseDouble(row[0]));
+                channels.setTime(Double.parseDouble(row[0]));
                 channels.setChannel1(Double.parseDouble(row[1]));
                 channels.setChannel2(Double.parseDouble(row[2]));
                 channels.setChannel3(Double.parseDouble(row[3]));
                 channels.setChannel4(Double.parseDouble(row[4]));
-                signals.put(timestamp, channels);
-
+                signals.put(i , channels);
+                i++;
             }
             // Close the InputStream and BufferedReader
             is.close();
@@ -210,7 +210,7 @@ public class DataImporter extends MainActivity {
 
     }
 
-    public Map<Time, Channels> getEEG(Resources resources) throws IOException {
+    public Map<Integer, Channels> getEEG(Resources resources) throws IOException {
         return importEEG(R.raw.patient51, resources);
     }
 

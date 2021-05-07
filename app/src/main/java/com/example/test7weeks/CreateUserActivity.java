@@ -87,7 +87,8 @@ public class CreateUserActivity extends Activity implements View.OnClickListener
                         startActivity(intent);
                     }
                 });
-                Toast.makeText(CreateUserActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(CreateUserActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+
         }
     }
 
