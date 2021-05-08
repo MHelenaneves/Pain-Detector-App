@@ -44,9 +44,7 @@
         </activity>
 
         <activity android:name=".ImpedanceCheckActivity"
-            android:theme="@style/Theme.Design.NoActionBar" >
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
         </activity>
 
         <activity android:name=".PainStateActivity"

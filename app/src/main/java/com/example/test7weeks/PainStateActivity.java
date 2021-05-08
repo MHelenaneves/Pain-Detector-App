@@ -2,6 +2,7 @@ package com.example.test7weeks;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -50,8 +51,11 @@ public class PainStateActivity extends AppCompatActivity implements View.OnClick
         Circle = findViewById(R.id.circle_iconpain);
         Drawable drawable = Circle.getDrawable();
         //If(drawable instanceof  AnimatedVectorDrawableCompat){
-        avdCircle =(AnimatedVectorDrawableCompat) drawable;
-        avdCircle.start();
+        if (drawable instanceof Animatable)
+        {
+            ((Animatable) drawable).start();
+        }
+
         //} else if(drawable instanceof AnimatedVectorDrawable){
         //avdLauncher2 = (AnimatedVectorDrawable)  drawable;
         // avdLauncher2.start();
@@ -64,6 +68,7 @@ public class PainStateActivity extends AppCompatActivity implements View.OnClick
     private void bridgeXML() {
 
         BrowseEEG = findViewById(R.id. browseeegpain);
+        Name = findViewById(R.id.namepain);
     }
 
     @Override

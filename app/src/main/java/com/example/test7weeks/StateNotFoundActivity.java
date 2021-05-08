@@ -1,4 +1,6 @@
 package com.example.test7weeks;
 
-public class StateNotFoundActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class StateNotFoundActivity extends AppCompatActivity {
 }

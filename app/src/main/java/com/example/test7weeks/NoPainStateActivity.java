@@ -2,6 +2,7 @@ package com.example.test7weeks;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -55,8 +56,11 @@ public class NoPainStateActivity extends AppCompatActivity implements View.OnCli
         Circle = findViewById(R.id.circle_icon);
         Drawable drawable = Circle.getDrawable();
         //If(drawable instanceof  AnimatedVectorDrawableCompat){
-        avdCircle =(AnimatedVectorDrawableCompat) drawable;
-        avdCircle.start();
+        if (drawable instanceof Animatable)
+        {
+            ((Animatable) drawable).start();
+        }
+
         //} else if(drawable instanceof AnimatedVectorDrawable){
         //avdLauncher2 = (AnimatedVectorDrawable)  drawable;
         // avdLauncher2.start();

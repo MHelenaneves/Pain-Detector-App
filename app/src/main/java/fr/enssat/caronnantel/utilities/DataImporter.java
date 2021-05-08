@@ -6,7 +6,6 @@ import android.util.Log;
 import com.example.test7weeks.Channels;
 import com.example.test7weeks.MainActivity;
 import com.example.test7weeks.R;
-import com.example.test7weeks.Time;
 
 import java.io.BufferedReader;
 import java.io.IOException;

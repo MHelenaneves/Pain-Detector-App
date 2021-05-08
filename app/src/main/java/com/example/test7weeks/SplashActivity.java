@@ -1,6 +1,7 @@
  package com.example.test7weeks;
 
 import android.content.Intent;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -47,14 +48,17 @@ public class SplashActivity extends AppCompatActivity {
         launcherIcon = findViewById(R.id.imageView2);
         Drawable drawable = launcherIcon.getDrawable();
         //If(drawable instanceof  AnimatedVectorDrawableCompat){
-            avdLauncher =(AnimatedVectorDrawableCompat) drawable;
-            avdLauncher.start();
+
+            if (drawable instanceof Animatable)
+            {
+                ((Animatable) drawable).start();
+            }
+
         //} else if(drawable instanceof AnimatedVectorDrawable){
            //avdLauncher2 = (AnimatedVectorDrawable)  drawable;
            // avdLauncher2.start();
         }
     //}
 
-    private void If(boolean b) {
-    }
+
 }
