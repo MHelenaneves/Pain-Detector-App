@@ -62,8 +62,8 @@
 
     <EditText
         android:id="@+id/editFirstName"
-        android:layout_width="278dp"
-        android:layout_height="43dp"
+        android:layout_width="274dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@drawable/text_colour"
         android:ems="10"
@@ -76,9 +76,8 @@
 
     <EditText
         android:id="@+id/editComments"
-        android:layout_width="272dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="274dp"
+        android:layout_height="45dp"
         android:backgroundTint="@drawable/text_colour"
         android:ems="10"
         android:hint="Comments"
@@ -88,7 +87,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/comments"
         app:layout_constraintTop_toBottomOf="@+id/comments"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.034" />
 
     <TextView
         android:id="@+id/medicalcondition"
@@ -114,8 +113,8 @@
 
     <EditText
         android:id="@+id/editMedicalCondition"
-        android:layout_width="275dp"
-        android:layout_height="39dp"
+        android:layout_width="274dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@drawable/text_colour"
         android:ems="10"
@@ -140,7 +139,7 @@
     <EditText
         android:id="@+id/editMedication"
         android:layout_width="274dp"
-        android:layout_height="41dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@drawable/text_colour"
         android:ems="10"
